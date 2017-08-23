@@ -11,4 +11,6 @@ optional arguments:
   -t THREADS     Numero de Threads
 ```
 
-FOi mais falso positivo que outra caceta, sugestoes ? manda o papo
+>> Foi mais falso positivo que outra caceta, sugestoes ? manda o papo
+
+Foram feitas algumas modificacoes, se achar algum novo falso positivo, ce avisa ai neguin
