@@ -11,6 +11,14 @@ optional arguments:
   -t THREADS     Numero de Threads
 ```
 
->> Foi mais falso positivo que outra caceta, sugestoes ? manda o papo
+Version 0.2 - Soon
+  - Simple User Enumeration
+  - Output file :(
+  - Comutação :)
 
-Foram feitas algumas modificacoes, se achar algum novo falso positivo, ce avisa ai neguin
+Version 0.1 
+  - MultiThread
+  - Bruta apenas um usuário
+  - Correção de alguns Falsos positivos
+  - Wordlist padrão
+
