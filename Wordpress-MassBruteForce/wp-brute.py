@@ -1,6 +1,5 @@
 from multiprocessing.pool import ThreadPool
 import requests, os.path,  argparse
-from sys import argv
 
 
 """
