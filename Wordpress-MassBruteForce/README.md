@@ -10,3 +10,5 @@ optional arguments:
   -w WRD_LIST    Wordlist
   -t THREADS     Numero de Threads
 ```
+
+FOi mais falso positivo que outra caceta, sugestoes ? manda o papo
