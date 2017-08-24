@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 from sys import argv
 import requests
 import re
@@ -19,7 +19,7 @@ def reverse_host(host):
 	f = open("revipd_outreverse.txt","a+")
 	del a[0:13]
 	for i in range(len(a)):
-		a[i] = a[i].translate(None,'1') 
+		a[i] = a[i].translate(None,'1')
 		if a[i] != "":
 			print "[*] "+a[i]
 			out.append(a[i])
@@ -30,24 +30,24 @@ def reverse_host(host):
 
 if len(argv) == 1:
 	print """
-	 _____                                _____ _____  
-	|  __ \                              |_   _|  __ \ 
+	 _____                                _____ _____
+	|  __ \                              |_   _|  __ \
 	| |__) |_____   _____ _ __ ___  ___    | | | |__) |
-	|  _  // _ \ \ / / _ \ '__/ __|/ _ \   | | |  ___/ 
-	| | \ \  __/\ V / _+_/ |  \__ \  __/  _| |_| |     
-	|_|  \_\___| \_/ \___|_|  |___/\___| |_____|_|     
+	|  _  // _ \ \ / / _ \ '__/ __|/ _ \   | | |  ___/
+	| | \ \  __/\ V / _+_/ |  \__ \  __/  _| |_| |
+	|_|  \_\___| \_/ \___|_|  |___/\___| |_____|_|
 
-	       Version:1.1    @R_PyPe                                          
-	 _____                        _       
-	|  __ \                      (_)      
-	| |  | | ___  _ __ ___   __ _ _ _ __  
-	| |  | |/ _ \| '_ ` _ \ / _` | | '_ \ 
+	       Version:1.1    @pyperanger                                          
+	 _____                        _
+	|  __ \                      (_)
+	| |  | | ___  _ __ ___   __ _ _ _ __
+	| |  | |/ _ \| '_ ` _ \ / _` | | '_ \
 	| |__| | (_) | | | | | | (_| | | | | |
 	|_____/ \___/|_| |_| |_|\__,_|_|_| |_|
 
 
-	Usage python %s IP/HOST 
-	
-	""" % (argv[0])                                      
+	Usage python %s IP/HOST
+
+	""" % (argv[0])
 else:
 	reverse_host(argv[1])
