@@ -5,9 +5,14 @@ print "ADB Backup APK Extrator\nSoh pra facilitar minha vida\n\n";
 my $x = `adb devices&>/dev/null`;
 if ($x =~ m/List of devices attached/){
     
-    print "[+] Devices Founds\n";
     my @b = split '\n', $x;
 
+    if (!defined(@b[1])){
+        print "[-] No Devices\n";
+        exit();
+    }
+
+    print "[+] Devices Founds\n";
     foreach(@b[1,]){
         @device = split ' ', $_;
         @devics_id = @devices[0];
