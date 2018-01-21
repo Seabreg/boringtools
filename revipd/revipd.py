@@ -7,7 +7,7 @@ import urllib
 def reverse_host(host):
 	print "\n[+] Search for websites in the server host [ Reverse IP]\n"
 	payload = {"remoteAddress":host,"key":""}
-	r = requests.post("http://domains.yougetsignal.com/domains.php",params=payload)
+	r = requests.post("https://domains.yougetsignal.com/domains.php",params=payload)
 
 	if "Daily reverse" in r.content:
 		print "[-] YouGetSignal blocked your IP:change your proxy or wait"
