@@ -4,7 +4,6 @@
 	XMPP: pype@0day.rocks
 	ref: https://httpd.apache.org/docs/2.4/mod/mod_status.html
 =cut
-#use strict;#<- Comment because strict pragma as it forces us to declare variables using 'my' keyword before using them.
 use warnings;
 use LWP::UserAgent;
 
