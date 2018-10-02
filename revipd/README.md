@@ -1,5 +1,5 @@
 
-> curl -s "https://viewdns.info/reverseip/?host=ey.com&t=1" | grep -Po "\040<td>\K(\S+)"  | sed 's/<\/td><td//g'
+> curl -s "https://viewdns.info/reverseip/?host=site&t=1" | grep -Po "\040<td>\K(\S+)"  | sed 's/<\/td><td//g'
 
 everything below is a bullshit. kisses 
 
