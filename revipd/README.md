@@ -1,4 +1,9 @@
-# revipd v1.1
+
+> curl -s "https://viewdns.info/reverseip/?host=ey.com&t=1" | grep -Po "\040<td>\K(\S+)"  | sed 's/<\/td><td//g'
+
+everything below is a bullshit. kisses 
+
+ 
 <h3><em>Reverse IP Domain<em></h3>
 
 <h3>This script has made with help of search-engine of yougetsignal website</h3>
