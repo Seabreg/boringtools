@@ -1,5 +1,5 @@
 # M.B0mb3r
-by Renan Everton
+
 
 
 [English Readme ]
