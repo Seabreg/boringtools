@@ -9,6 +9,7 @@ ExtratorAPK - Simple script for extract APK file from device using ADB
 Perl_XOR.Encrypt - Simple XOR "Encrypt" implementation in perl
 server-status-collector - Apache mod_status Collector 
 zoomeye-api - A OLD Zoomeye API script 
+pam_backlogger -  Pam Backdoor + Keylogger (patch file)
 ```
 tools that i made in "tedio" momments =D
 
